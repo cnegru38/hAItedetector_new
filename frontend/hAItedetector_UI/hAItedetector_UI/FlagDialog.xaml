@@ -1,0 +1,57 @@
+﻿<Window x:Class="hAItedetector.UI.FlagDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Report mislabelled message"
+        Height="180" Width="340"
+        Icon="Assets\icon.png"
+        ResizeMode="NoResize"
+        Background="#1E1E1E"
+        FontFamily="Microsoft JhengHei UI">
+
+    <StackPanel Margin="20">
+        <TextBlock Text="Correct label:"
+                   Foreground="#D0D0D0"
+                   FontSize="13"
+                   Margin="0,0,0,12"/>
+
+        <ComboBox x:Name="CmbLabel"
+                  Background="#2D2D2D"
+                  Foreground="#D0D0D0"
+                  BorderBrush="#3D3D3D"
+                  FontFamily="Microsoft JhengHei UI"
+                  Margin="0,0,0,16">
+            <ComboBoxItem Content="normal"       Tag="normal"/>
+            <ComboBoxItem Content="spam"         Tag="spam"/>
+            <ComboBoxItem Content="hate_speech"  Tag="hate_speech"/>
+            <ComboBoxItem Content="harassment"   Tag="harassment"/>
+            <ComboBoxItem Content="obscene"      Tag="obscene"/>
+        </ComboBox>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="8"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    Content="Cancel"
+                    Height="32"
+                    Background="#2D2D2D"
+                    Foreground="#D0D0D0"
+                    BorderBrush="#3D3D3D"
+                    FontFamily="Microsoft JhengHei UI"
+                    Click="BtnCancel_Click"/>
+
+            <Button Grid.Column="2"
+                    Content="Confirm"
+                    Height="32"
+                    Width="90"
+                    Background="#E8177A"
+                    Foreground="#FFFFFF"
+                    BorderBrush="#E8177A"
+                    FontFamily="Microsoft JhengHei UI"
+                    Click="BtnConfirm_Click"/>
+        </Grid>
+    </StackPanel>
+</Window>

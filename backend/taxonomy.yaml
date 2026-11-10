@@ -1,0 +1,38 @@
+# taxonomia proiectului
+
+intents:
+  - spam          # mesaje nesolicitate
+  - harassment    # insulte / atacuri personale (fără bază identitară)
+  - hate_speech   # ură bazată pe identitate
+  - obscene       # limbaj vulgar nețintit
+
+spam_subtypes:
+  - junk          # spam general / reclame
+  - scam          # înșelătorii
+  - phishing      # cereri de date sensibile
+
+hate_target:
+  - race
+  - religion
+  - gender
+  - orientation
+  - ethnicity
+  - other
+
+hate_severity:
+  - low
+  - medium
+  - high
+
+# Praguri de clasificare pentru fiecare intenție
+thresholds:
+  spam:        0.3
+  hate_speech: 0.55
+  harassment:  0.65
+  obscene:     0.4
+
+thresholds_ro:
+  spam:        0.3
+  hate_speech: 0.5
+  harassment:  0.65
+  obscene:     0.7   # mai restrictiv pentru RO unde modelul e mai sigur

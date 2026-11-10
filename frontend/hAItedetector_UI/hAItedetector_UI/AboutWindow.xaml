@@ -1,0 +1,44 @@
+﻿<Window x:Class="hAItedetector.UI.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About" Height="250" Width="250"
+        ResizeMode="NoResize"
+        Background="#1E1E1E"
+        Icon="Assets\icon.png"
+        FontFamily="Microsoft JhengHei UI">
+
+    <StackPanel VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="20">
+
+        <Image Source="Assets/logo.png"
+               Height="48"
+               Margin="0,0,0,16"
+               HorizontalAlignment="Center"/>
+
+        <TextBlock Text="hAItedetector"
+                   Foreground="#E8177A"
+                   FontSize="18"
+                   FontWeight="SemiBold"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Version 1.3.3"
+                   Foreground="#888888"
+                   FontSize="12"
+                   HorizontalAlignment="Center"
+                   Margin="0,4,0,12"/>
+
+        <Rectangle Height="1" Fill="#3D3D3D" Margin="0,0,0,12"/>
+
+        <TextBlock Text="Developed by - Negru Cosmin-Ștefan"
+                   Foreground="#D0D0D0"
+                   FontSize="9"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Text="https://github.com/cnegru38/"
+                   Foreground="#888888"
+                   FontSize="11"
+                   HorizontalAlignment="Center"
+                   Margin="0,4,0,0"/>
+    </StackPanel>
+</Window>

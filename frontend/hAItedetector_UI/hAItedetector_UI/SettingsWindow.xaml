@@ -1,0 +1,154 @@
+﻿<Window x:Class="hAItedetector.UI.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="300" Width="400"
+        ResizeMode="NoResize"
+        Background="#1E1E1E"
+        Icon="Assets\icon.png"
+        FontFamily="Microsoft JhengHei UI">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="BrushAccent"      Color="#E8177A"/>
+        <SolidColorBrush x:Key="BrushSurface"     Color="#2D2D2D"/>
+        <SolidColorBrush x:Key="BrushBorder"      Color="#3D3D3D"/>
+        <SolidColorBrush x:Key="BrushTextPrimary" Color="#D0D0D0"/>
+        <SolidColorBrush x:Key="BrushTextMuted"   Color="#888888"/>
+
+        <Style x:Key="DarkButton" TargetType="Button">
+            <Setter Property="Background"       Value="#2D2D2D"/>
+            <Setter Property="Foreground"       Value="#D0D0D0"/>
+            <Setter Property="BorderBrush"      Value="#3D3D3D"/>
+            <Setter Property="BorderThickness"  Value="1"/>
+            <Setter Property="FontFamily"       Value="Microsoft JhengHei UI"/>
+            <Setter Property="FontSize"         Value="13"/>
+            <Setter Property="Height"           Value="32"/>
+            <Setter Property="Cursor"           Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#3D3D3D"/>
+                                <Setter Property="BorderBrush" Value="#E8177A"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#E8177A"/>
+                                <Setter Property="Foreground" Value="#FFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel Margin="20">
+
+        <!-- titlu -->
+        <TextBlock Text="Settings"
+                   Foreground="#E8177A"
+                   FontSize="18"
+                   FontWeight="SemiBold"
+                   Margin="0,0,0,20"/>
+
+        <!-- separator -->
+        <Rectangle Height="1" Fill="#3D3D3D" Margin="0,0,0,20"/>
+
+        <!-- Toggle cenzurare -->
+        <Grid Margin="0,0,0,16">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Censor hate speech"
+                           Foreground="#D0D0D0"
+                           FontSize="13"/>
+                <TextBlock Text="Replaces detected harmful text with # symbols"
+                           Foreground="#888888"
+                           FontSize="11"
+                           Margin="0,2,0,0"/>
+            </StackPanel>
+
+            <CheckBox x:Name="ChkCensor"
+                      Grid.Column="1"
+                      VerticalAlignment="Center"
+                      IsChecked="False"/>
+        </Grid>
+
+        <!-- separator -->
+        <Rectangle Height="1" Fill="#3D3D3D" Margin="0,0,0,16"/>
+
+        <!-- Selector limbă -->
+        <Grid Margin="0,0,0,24">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Language"
+                           Foreground="#D0D0D0"
+                           FontSize="13"/>
+                <TextBlock Text="Auto detects text language"
+                           Foreground="#888888"
+                           FontSize="11"
+                           Margin="0,2,0,0"/>
+            </StackPanel>
+
+            <ComboBox x:Name="CmbLang"
+                      Grid.Column="1"
+                      Width="100"
+                      VerticalAlignment="Center"
+                      Background="#2D2D2D"
+                      Foreground="#D0D0D0"
+                      BorderBrush="#3D3D3D"
+                      FontFamily="Microsoft JhengHei UI">
+                <ComboBoxItem Content="Auto" Tag="{x:Null}" IsSelected="True"/>
+                <ComboBoxItem Content="Română" Tag="ro"/>
+                <ComboBoxItem Content="English" Tag="en"/>
+            </ComboBox>
+        </Grid>
+
+        <!-- butoane footer -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="8"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="BtnAbout"
+                    Grid.Column="0"
+                    Content="About..."
+                    Style="{StaticResource DarkButton}"
+                    Width="90"
+                    HorizontalAlignment="Left"
+                    Click="BtnAbout_Click"/>
+
+            <Button x:Name="BtnCancel"
+                    Grid.Column="1"
+                    Content="Cancel"
+                    Style="{StaticResource DarkButton}"
+                    Width="80"
+                    Click="BtnCancel_Click"/>
+
+            <Button x:Name="BtnSave"
+                    Grid.Column="3"
+                    Content="Save"
+                    Style="{StaticResource DarkButton}"
+                    Width="80"
+                    Click="BtnSave_Click"/>
+        </Grid>
+
+    </StackPanel>
+</Window>

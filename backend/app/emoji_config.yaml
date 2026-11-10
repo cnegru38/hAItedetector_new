@@ -1,0 +1,27 @@
+
+# high_risk:   emoji cu conotație clară de violență/amenințare
+# ambiguous:   emoji cu semantică dependentă de context (ignorate complet)
+#
+# orice emoji care nu apare în nicio listă este tratat
+# de biblioteca emoji cu denumirea sa standard din unicode
+
+high_risk:
+  "🔫": "gun"
+  "🔪": "knife"
+  "💣": "bomb"
+  "🪓": "axe"
+  "🗡️": "dagger"
+  "☠️": "danger"
+  "🧨": "dynamite"
+  "🪤": "trap"
+
+ambiguous:
+  "💀": null   # skull - folosit ironic / reactie online
+  "😈": null   # devil - context humor frecvent
+  "👿": null   # angry devil - similar cu de mai sus
+  "🖕": null   # gest vulgar - ambiguu fara context
+  "🤬": null   # swearing face - poate fi frustare generala
+  "😡": null   # furie - nu indica neaparat hate speech
+  "😤": null   # aroganta - neutral in multe contexte
+
+  

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="hAItedetector.UI.Controls.MessageBubble"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Border x:Name="BubbleBorder"
+            CornerRadius="12"
+            Padding="12,8"
+            MaxWidth="420"
+            Margin="8,4">
+        <StackPanel>
+            <TextBlock x:Name="TxtSender"
+                FontFamily="Microsoft JhengHei UI"
+                FontSize="10"
+                FontWeight="SemiBold"
+                Foreground="#E8177A"
+                Margin="0,0,0,4"
+                Visibility="Collapsed"/>
+            
+            <!-- textul mesajului -->
+            <TextBlock x:Name="TxtMessage"
+                       TextWrapping="Wrap"
+                       FontFamily="Microsoft JhengHei UI"
+                       FontSize="13"/>
+
+            <!-- rând inferior: etichetă + scor -->
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,6,0,0">
+                <Border x:Name="LabelBadge"
+                        CornerRadius="4"
+                        Padding="6,2">
+                    <TextBlock x:Name="TxtLabel"
+                               FontFamily="Microsoft JhengHei UI"
+                               FontSize="10"
+                               FontWeight="SemiBold"/>
+                </Border>
+                <TextBlock x:Name="TxtScore"
+                           FontFamily="Microsoft JhengHei UI"
+                           FontSize="10"
+                           Foreground="#888888"
+                           VerticalAlignment="Center"
+                           Margin="8,0,0,0"/>
+                <Button x:Name="BtnFlag"
+                            Content="⚑"
+                            FontSize="10"
+                            Margin="8,0,0,0"
+                            VerticalAlignment="Center"
+                            Visibility="Collapsed"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#888888"
+                            Cursor="Hand"
+                            Click="BtnFlag_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Border>
+</UserControl>

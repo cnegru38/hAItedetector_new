@@ -1,0 +1,159 @@
+# =========================
+
+# Visual Studio
+
+# =========================
+
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+
+# Build results
+
+# =========================
+
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# =========================
+
+# Rider / VS Code (optional)
+
+# =========================
+
+.idea/
+.vscode/
+
+# =========================
+
+# NuGet
+
+# =========================
+
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!packages/build/
+*.nuget.props
+*.nuget.targets
+
+# =========================
+
+# .NET Core / .NET
+
+# =========================
+
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# =========================
+
+# Publish output
+
+# =========================
+
+publish/
+*.publishsettings
+
+# =========================
+
+# Debug / Release folders
+
+# =========================
+
+Debug/
+Release/
+x64/
+x86/
+AnyCPU/
+
+# =========================
+
+# Resharper
+
+# =========================
+
+_ReSharper*/
+*.DotSettings.user
+
+# =========================
+
+# Test results
+
+# =========================
+
+TestResults/
+*.trx
+*.coverage
+
+# =========================
+
+# Windows-specific
+
+# =========================
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================
+
+# WPF specific
+
+# =========================
+
+*.g.cs
+*.g.i.cs
+*.baml
+
+# =========================
+
+# Logs
+
+# =========================
+
+*.log
+
+# =========================
+
+# Temporary files
+
+# =========================
+
+*.tmp
+*.temp
+
+# =========================
+
+# OS generated
+
+# =========================
+
+.DS_Store
+
+# =========================
+
+# Database files (optional)
+
+# =========================
+
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+# =========================
+
+# Secrets / config (optional)
+
+# =========================
+
+appsettings.Development.json
+secrets.json
